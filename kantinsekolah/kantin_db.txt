@@ -1,0 +1,29 @@
+create database kantin_db;
+use kantin_db;
+
+create table orders(
+id int primary key auto_increment not null,
+item varchar(100) not null,
+quantity int not null,
+total_price int not null
+);
+
+create table messages(
+id int primary key auto_increment not null,
+name varchar(100) not null,
+email varchar(100) not null,
+message varchar(100) not null
+);
+
+create table menu_items(
+id int primary key auto_increment not null,
+item varchar(100) not null,
+price int not null,
+stock int not null
+);
+
+insert into menu_items (item, price, stock) values
+("Nasi Goreng", "12000", "10"),
+("Es_Teh", "9000", "5"),
+("Batagor", "10000", "5"),
+("Jus Jeruk", "10000", "5")
